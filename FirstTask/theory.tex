@@ -23,7 +23,7 @@
 сразу по всем критериям: если по одному из критериев вариант очень
 хорош, то по другому, как правило, он будет далеко не лучший.
 
-\newpage
+\clearpage
 
 \section*{\LARGE Выполнение практической работы}
 \addcontentsline{toc}{section}{Выполнение практической работы}
@@ -237,7 +237,7 @@
 Далее были реализованы рассматриваемые методы на языке программирования
 Python.
 
-Код метода SAW:
+Код метода \textbf{SAW}:
 \begin{lstlisting}[language=Python]
 def saw(w, apps):
 	res = []
@@ -249,7 +249,7 @@ def saw(w, apps):
 	return res
 \end{lstlisting}
 
-Код метода MOUT:
+Код метода \textbf{MOUT}:
 \begin{lstlisting}[language=Python]
 def mout(w, apps):
 	mx = copy.deepcopy(apps)
@@ -263,13 +263,12 @@ def mout(w, apps):
 		x_min.append(min(vec))
 	for i in range(len(mx)):
 		for j in range(len(mx[0])):
-			mx[i][j] = (mx[i][j]-x_min[j])
-			mx[i][j] /= (x_max[j]-x_min[j])
+			mx[i][j] = (mx[i][j]-x_min[j]) / (x_max[j]-x_min[j])
 			mx[i][j] = round(mx[i][j], 3)
 	return saw(w, mx)
 \end{lstlisting}
 
-Код метода TOPSIS:
+Код метода \textbf{TOPSIS}:
 \begin{lstlisting}[language=Python]
 def topical(w, apps):
 	mx = copy.deepcopy(apps)
@@ -363,7 +362,7 @@ def topical(w, apps):
 опираясь на данные, полученные в ходе выполнения практической работы,
 было выбрано наиболее оптимальное ПО.
 
-\newpage
+\clearpage
 
 \begin{thebibliography}{0}
 	\bibitem{Koch:saw:topsis}
@@ -379,5 +378,4 @@ def topical(w, apps):
 	\bibitem{studfile:mout} Многокритериальная теория полезности (maut)
 		[Электронные ресурс]. URL:
 		\url{https://studfile.net/preview/5316711/page:24/}
-	\bibitem{studfile:mout} Многокритериальная теория полезности (maut)
 \end{thebibliography}
