@@ -61,19 +61,8 @@
 
 \providecommand{\No}{\textnumero}
 
-\newlist{stpenumerate}{enumerate}{3}
-\setlist[stpenumerate]{label=\textbf{Шаг \arabic*}}
-\newlist{stgenumerate}{enumerate}{3}
-\setlist[stgenumerate]{label=\textbf{Этап \arabic*}}
-
 %\setlength{\abovecaptionskip}{3pt}
 %\setlength{\belowcaptionskip}{3pt}
-
-% redefinition of the list enumeration style
-%\renewcommand{\labelitemi}{$\bullet$}
-%\renewcommand{\labelitemii}{$\bullet$}
-%\renewcommand{\labelitemiii}{$\bullet$}
-%\renewcommand{\labelitemiv}{$\bullet$}
 
 \newenvironment{image}{
 	\begin{figure}[h!tp]
@@ -81,4 +70,5 @@
 }{
 	\end{figure}
 }
+\newcommand\includegrph[2][width=1\textwidth]{\includegraphics[#1]{#2}}
 
